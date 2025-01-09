@@ -1,0 +1,67 @@
+//
+//  Icons.swift
+//  Finance
+//
+//  Created by UI8 on 12/10/2020.
+//
+
+import SwiftUI
+
+struct Icons {
+    //All the icons are accessible from here. We have used SF Symbols provided by Apple. You can download the SF Symbols app and add more icons static let (iconName) = "iconName".
+    static let pieChartIcon = "chart.pie.fill"
+    static let paperPlaneIcon = "paperplane.fill"
+    static let chartXaxisIcon = "chart.bar.xaxis"
+    static let stackIcon = "square.stack.3d.up.fill"
+    static let boltIcon = "bolt.fill"
+    static let chevronLeftIcon = "chevron.left"
+    static let chevronRightIcon = "chevron.right"
+    static let locationIcon = "location.fill"
+    static let identityIcon = "person.crop.circle.fill"
+    static let cardIcon = "creditcard.fill"
+    static let buildingIcon = "building.fill"
+    static let bellIcon = "bell.fill"
+    static let sendIcon = "person.crop.circle.fill.badge.plus"
+    static let calendarIcon = "calendar"
+    static let percentIcon = "percent"
+    static let arrowLeftIcon = "arrowshape.turn.up.left.fill"
+    static let cartIcon = "cart.fill"
+    static let mailStackIcon = "mail.stack.fill"
+    static let plusIcon = "plus"
+    static let plusBackgroundIcon = "plus.circle.fill"
+    static let receiptIcon = "doc.plaintext.fill"
+    static let twoGearsIcon = "gearshape.2.fill"
+    static let exclamationMarkIcon = "exclamationmark.circle.fill"
+    static let pinIcon = "mappin.circle.fill"
+    static let carIcon = "car.fill"
+    static let wifiIcon = "wifi"
+    static let tvIcon = "tv.fill"
+    static let gearIcon = "gearshape.fill"
+    static let houseIcon = "house.fill"
+    static let maintenanceIcon = "wrench.and.screwdriver.fill"
+    static let optionsIcon = "switch.2"
+    static let paymentsIcon = "arrow.left.arrow.right"
+    static let bagIcon = "bag.fill"
+    static let imagesIcons = "rectangle.fill.on.rectangle.angled.fill"
+    static let repeatIcon = "repeat"
+    static let phoneIcon = "iphone"
+    static let studentIcon = "graduationcap.fill"
+    static let cameraIcon = "camera.fill"
+    static let shareIcon = "square.and.arrow.up.fill"
+    static let qrCodeIcon = "qrcode"
+    static let transactionsIcon = "doc.text.fill"
+    static let freezeIcon = "snow"
+    static let eyeIcon = "eye.fill"
+    static let chatIcon = "bubble.left.fill"
+    static let limitIcon = "speedometer"
+    static let statementsIcon = "doc.on.doc.fill"
+    static let trashIcon = "trash.fill"
+    static let profileIcon = "person.fill"
+    static let infoIcon = "info.circle.fill"
+    static let appearanceIcon = "moon.circle.fill"
+    static let faceIDIcon = "faceid"
+    static let aboutTheAppIcon = "app.badge.fill"
+    static let verifiedAccountIcon = "person.crop.circle.fill.badge.checkmark"
+    static let arrowUpIcon = "arrow.up.circle.fill"
+    static let searchIcon = "magnifyingglass"
+}
