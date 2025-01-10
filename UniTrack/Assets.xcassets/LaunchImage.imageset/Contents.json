@@ -1,16 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "logo hình 4.png",
       "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "filename" : "Image@2x.png",
+      "filename" : "logo hình 2.png",
       "idiom" : "iphone",
       "scale" : "2x"
     },
     {
-      "filename" : "Image@3x.png",
+      "filename" : "logo hình 3.png",
       "idiom" : "iphone",
       "scale" : "3x"
     }

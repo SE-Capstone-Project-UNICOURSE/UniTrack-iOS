@@ -12,7 +12,7 @@ struct OnboardingItem: View {
     @State var features = onboardingFeatures
     @State var showSignUp = false
     var body: some View {
-        //This is nboarding item, you can modify the way it looks like from here if you wish.
+        // This is nboarding item, you can modify the way it looks like from here if you wish.
         VStack(alignment: .leading, spacing: 30) {
             Image(onboardingItem.image)
                 .renderingMode(.original)
@@ -34,7 +34,9 @@ struct OnboardingItem: View {
                     OnboardingFeatureItem(onboardingFeature: features[3])
                 }
             }
+
+            Spacer()
         }
-        .frame(width: UIScreen.main.bounds.width-32)
+        .frame(width: UIScreen.main.bounds.width - 32)
     }
 }

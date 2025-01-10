@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//This is tab bar. You can change what information it displays here.
+// This is tab bar. You can change what information it displays here.
 struct TabBarView: View {
     var body: some View {
         TabView {
@@ -42,6 +42,7 @@ struct TabBarView: View {
                 Label("Settings", systemImage: Icons.gearIcon)
             }
         }
+        .accentColor(.init(.primaryColorButton1))
     }
 }
 

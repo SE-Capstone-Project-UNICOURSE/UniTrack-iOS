@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//Here you can find all the buttons used throughout the application
+// Here you can find all the buttons used throughout the application
 struct PrimaryButton: View {
     var icon: String
     var text: String
@@ -21,7 +21,7 @@ struct PrimaryButton: View {
                 Label(text, systemImage: icon)
                     .font(.system(size: 17, weight: .semibold, design: .default))
                     .foregroundColor(textColor)
-                    .frame(width: UIScreen.main.bounds.width-32, height: 50)
+                    .frame(width: UIScreen.main.bounds.width - 32, height: 50)
                     .background(backgroundColor)
                     .clipShape(RoundedRectangle(cornerRadius: 14))
             }
@@ -118,12 +118,12 @@ struct PrimaryTertiaryButtons: View {
                 Spacer()
                 VStack(spacing: 20) {
                     Button(action: {
-                        //TODO here
+                        // TODO: here
                     }) {
                         PrimaryButton(icon: icon, text: primaryText, textColor: textColor, backgroundColor: backgroundColor)
                     }
                     Button(action: {
-                        //TODO here
+                        // TODO: here
                     }) {
                         TertiaryButton(text: tertiaryText, fontWeight: fontWeight)
                     }
@@ -133,4 +133,59 @@ struct PrimaryTertiaryButtons: View {
     }
 }
 
+struct MainButton: View {
+    var title: String
+    var mainColor: Color = .init(.primaryColorButton1)
+    var cornerRadius: CGFloat = 10.0
+    var padding: EdgeInsets = .init(top: 12, leading: 16, bottom: 12, trailing: 16)
+    var font: Font = .headline
+    var fontWeight: Font.Weight = .bold
+    var foregroundColor: Color = .white
+    var width: CGFloat? = nil
+    var height: CGFloat? = nil
+    var isOutline: Bool = false
+    var isLoading: Bool = false
+    var isDisable: Bool = false
+    var action: () -> Void
+    @Environment(\.colorScheme) var colorScheme
 
+    var body: some View {
+        Button(action: {
+            if !isLoading {
+                action()
+            }
+        }) {
+            ZStack {
+                if isLoading {
+                    // Hiển thị ProgressView nếu đang tải
+                    HStack(spacing: 10) {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle(tint: isOutline ? mainColor : foregroundColor))
+                        Text("Loading...")
+                            .font(font)
+                            .fontWeight(fontWeight)
+                            .foregroundColor(foregroundColor)
+                    }
+                } else {
+                    // Hiển thị văn bản nếu không đang tải
+                    Text(title)
+                        .font(font)
+                        .fontWeight(fontWeight)
+                        .foregroundColor(isOutline ? mainColor : foregroundColor)
+                }
+            }
+            .padding(padding)
+            .frame(maxWidth: width ?? .infinity, maxHeight: height)
+            .background(
+                isOutline ? Color.clear : mainColor
+            )
+            .cornerRadius(cornerRadius)
+            .overlay(
+                RoundedRectangle(cornerRadius: cornerRadius)
+                    .stroke(isOutline ? mainColor : Color.clear, lineWidth: 1)
+            )
+            .opacity(colorScheme == .dark ? 0.7 : 1.0)
+        }
+        .disabled(isLoading || isDisable)
+    }
+}

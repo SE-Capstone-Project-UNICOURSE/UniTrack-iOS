@@ -14,8 +14,8 @@ struct LaunchScreen: View {
         //If you don't want to use the splash screen at all you can just go to 'FinanceApp.swift' file and comment out the 'LaunchScreen' and uncomment the 'ContentView'.
         ZStack {
             Color(.systemGroupedBackground).edgesIgnoringSafeArea(.all)
-            Image("LaunchImage")
-                .renderingMode(.original)
+            Image(.launch)
+                .renderingMode(.template)
             if showNextView {
                 ContentView()
                     .environmentObject(ViewRouter())

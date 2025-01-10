@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//This is a data model for onboarding views, you can change text, colors and many other things here if you wish.
+// This is a data model for onboarding views, you can change text, colors and many other things here if you wish.
 struct Onboarding: Identifiable, Hashable {
     var id = UUID()
     var image: String
@@ -28,7 +28,7 @@ var onboarding = [
         currentView: 1,
         primaryButtonIcon: Icons.boltIcon,
         primaryButtonText: "Get started",
-        primaryButtonColor: Color(.systemIndigo),
+        primaryButtonColor: Color(.primaryColorButton1),
         tertiaryButtonText: "I already have an account"),
     Onboarding(
         image: Images.onboardingIcon2,
@@ -37,6 +37,6 @@ var onboarding = [
         currentView: 2,
         primaryButtonIcon: Icons.boltIcon,
         primaryButtonText: "Get started",
-        primaryButtonColor: Color(.systemIndigo),
+        primaryButtonColor: Color(.primaryColorButton1),
         tertiaryButtonText: "I already have an account")
 ]
